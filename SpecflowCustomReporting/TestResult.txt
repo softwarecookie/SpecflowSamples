@@ -1,0 +1,27 @@
+***** Specflow.CalculatorFeature.AddAPositiveNumberToNegativeNumber
+Given I have entered 50 into the calculator
+-> done: CalculatorStepDefinition.GivenIHaveEnteredSomethingIntoTheCalculator(50) (0.0s)
+And I have entered -70 into the calculator
+-> done: CalculatorStepDefinition.GivenIHaveEnteredSomethingIntoTheCalculator(-70) (0.0s)
+When I press add
+-> done: CalculatorStepDefinition.WhenIPressAdd() (0.0s)
+Then the result should be -30 on the screen
+-> error: Assert.AreEqual failed. Expected:<-30>. Actual:<-20>. Expected -30 & Actual -20
+***** Specflow.CalculatorFeature.AddTwoNegativeNumbers
+Given I have entered -50 into the calculator
+-> done: CalculatorStepDefinition.GivenIHaveEnteredSomethingIntoTheCalculator(-50) (0.0s)
+And I have entered -70 into the calculator
+-> done: CalculatorStepDefinition.GivenIHaveEnteredSomethingIntoTheCalculator(-70) (0.0s)
+When I press add
+-> done: CalculatorStepDefinition.WhenIPressAdd() (0.0s)
+Then the result should be -130 on the screen
+-> error: Assert.AreEqual failed. Expected:<-130>. Actual:<-120>. Expected -130 & Actual -120
+***** Specflow.CalculatorFeature.AddTwoPositiveNumbers
+Given I have entered 50 into the calculator
+-> done: CalculatorStepDefinition.GivenIHaveEnteredSomethingIntoTheCalculator(50) (0.0s)
+And I have entered 70 into the calculator
+-> done: CalculatorStepDefinition.GivenIHaveEnteredSomethingIntoTheCalculator(70) (0.0s)
+When I press add
+-> done: CalculatorStepDefinition.WhenIPressAdd() (0.0s)
+Then the result should be 120 on the screen
+-> done: CalculatorStepDefinition.ThenTheResultShouldBe(120) (0.0s)

@@ -25,6 +25,7 @@ namespace Specflow
         public void GivenIHaveEnteredSomethingIntoTheCalculator(int number)
         {
             numbers.Add(number);
+            
         }
 
         [When("I press add")]

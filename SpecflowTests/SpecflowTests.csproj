@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Specflow</RootNamespace>
     <AssemblyName>Specflow</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -16,6 +16,7 @@
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -25,6 +26,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,6 +36,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="nunit.core">
@@ -73,10 +77,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Calculator.feature.cs">
+    <Compile Include="AddCalculator.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Calculator.feature</DependentUpon>
+      <DependentUpon>AddCalculator.feature</DependentUpon>
     </Compile>
     <Compile Include="CalculatorStepDefinition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -85,20 +89,16 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Calculator.feature">
+    <None Include="AddCalculator.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Calculator.feature.cs</LastGenOutput>
+      <LastGenOutput>AddCalculator.feature.cs</LastGenOutput>
     </None>
     <None Include="Nuget.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Reporting\Common\Common.xslt" />
-    <Content Include="Reporting\Common\GherkinElements.xslt" />
-    <Content Include="Reporting\Common\Languages.xml" />
-    <Content Include="Reporting\NUnitExecutionReport\NUnitExecutionReport.xslt" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
